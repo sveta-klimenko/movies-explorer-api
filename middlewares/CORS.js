@@ -1,5 +1,5 @@
 const allowedCors = [
-  'http://localhost:3001',
+  'http://localhost:3002',
   'http://dogroseknight.front.nomoredomains.club',
   'https://dogroseknight.front.nomoredomains.club',
 ];
