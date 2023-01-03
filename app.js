@@ -4,9 +4,9 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
-import rateLimit from 'express-rate-limit';
 import { errors } from 'celebrate';
 import { constants } from 'http2';
+import { limiter } from './middlewares/limiter.js';
 import { router } from './routes/index.js';
 import { CORS } from './middlewares/CORS.js';
 import { requestLogger, errorLogger } from './middlewares/logger.js';
@@ -29,12 +29,6 @@ mongoose.connect(DB);
 
 app.use(requestLogger);
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // за 15 минут
-  max: 100, // можно совершить максимум 100 запросов с одного IP
-});
-
-// подключаем rate-limiter
 app.use(limiter);
 
 app.use(helmet());
