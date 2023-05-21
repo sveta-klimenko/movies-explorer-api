@@ -2,8 +2,8 @@ const allowedCors = [
   'http://localhost:3000',
   'http://localhost:3001',
   'http://localhost:3002',
-  'http://dogroseknight.front.nomoredomains.club',
-  'https://dogroseknight.front.nomoredomains.club',
+  'http://diploma.dogroseknight.nomoredomains.club',
+  'https://diploma.dogroseknight.nomoredomains.club',
 ];
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
