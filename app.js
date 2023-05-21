@@ -11,8 +11,8 @@ import { router } from './routes/index.js';
 import { CORS } from './middlewares/CORS.js';
 import { requestLogger, errorLogger } from './middlewares/logger.js';
 
-// Слушаем 3002 порт
-const { PORT = 3002 } = process.env;
+// Слушаем 3000 порт
+const { PORT = 3000 } = process.env;
 
 const config = dotenv.config({
   path: path
